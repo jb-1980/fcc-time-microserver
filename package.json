@@ -1,0 +1,19 @@
+{
+  "name": "freecodecamp-timestamp-microserver",
+  "version": "0.0.0",
+  "description": "My Attempt at the freecodecamp timestamp microserver",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Gilgen",
+  "license": "ISC",
+  "dependencies": {
+    "datejs": "^1.0.0-rc3",
+    "express": "^4.13.4",
+    "moment": "^2.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
+}
