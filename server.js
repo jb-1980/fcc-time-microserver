@@ -34,6 +34,12 @@ app.get('/:date',function(req,res){
   }
 });
 
+// ===================================
+// Render index ======================
+// ===================================
+app.get('/',function(req,res) {
+  res.sendFile(__dirname + '/index.html');
+});
 // launch ======================================================================
 app.listen(port);
 console.log('==> 🌎  Listening on port '+port);
