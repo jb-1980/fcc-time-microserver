@@ -4,8 +4,8 @@ Time-Microservice
 This is just a simple api service to obtain a timestamp from a date string and vice versa according to the challenge from [Free Code Camp](https://www.freecodecamp.com/challenges/timestamp-microservice)
 
 #### Example Usage
-`https://localhost:8080/1451631600`  
-`https://localhost:8080/January%201,%202016`
+`https://fcc-timemicroservice.herokuapp.com/1451631600`  
+`https://fcc-timemicroservice.herokuapp.com/January%201,%202016`
 
 #### Example Response
 `{ unix: 1451631600, natural: "January 1, 2016" }`

@@ -9,7 +9,6 @@
   "author": "Joseph Gilgen",
   "license": "ISC",
   "dependencies": {
-    "datejs": "^1.0.0-rc3",
     "express": "^4.13.4",
     "moment": "^2.13.0"
   },

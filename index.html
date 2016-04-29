@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Gilgen Labs Time-Microservice</title>
+		<style>
+			code{
+			 color:#c7254e;
+			 background-color:#f9f2f4;
+			 border-radius:4px
+			}
+		</style>
+	</head>
+	<body id="preview">
+      <h2>Time-Microservice</h2>
+      <p>
+	    This is just a simple api service to obtain a timestamp from a
+	    date string and vice versa according to the challenge from
+	    <a href="https://www.freecodecamp.com/challenges/timestamp-microservice">Free Code Camp</a>
+	  </p>
+      <h4><a id="Example_Usage_5"></a>Example Usage</h4>
+      <p>
+		<code>https://fcc-timemicroservice.herokuapp.com/1451631600</code><br>
+        <code>https://fcc-timemicroservice.herokuapp.com/January%201,%202016</code>
+      </p>
+      <h4><a id="Example_Response_9"></a>Example Response</h4>
+      <p>
+		<code>{ unix: 1451631600, natural: &quot;January 1, 2016&quot; }</code>
+	  </p>
+      <h4><a id="Reflection_12"></a>Reflection</h4>
+      <p>
+		I chose to use moment.js as a library to work with the dates
+		because I liked the way that it could accept date strings as
+		well as validate them. I suppose that datejs would be another
+		option to explore. Of course, this could also be done with some
+		vanilla javascript as the requirements of the challenge were not
+		too difficult. But I liked that the library already accepts
+		natural language strings. So in the spirit of DRY, moment worked
+		for me.
+	  </p>
+    </body>
+</html>
