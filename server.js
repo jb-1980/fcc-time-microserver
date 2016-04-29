@@ -11,38 +11,29 @@ var moment = require('moment');
 // DATE INPUT ========================
 // ===================================
 app.get('/:date',function(req,res){
-  if(moment(req.params.date, ['MMMM D, YYYY','MMMM DD, YYYY'],'en', true)
-     .isValid()){
-
+  if(!isNaN(req.params.date)){// date is assumed timestamp
+    var date = moment.unix(Number(req.params.date));
     res.json({
-     'unix': moment(req.params.date).unix(),
-     'natural': req.params.date,
-     'type':'natural'
-    });
-  } else if(!isNaN(req.params.date)){
-    res.json({
-      'unix': Number(req.params.date),
-      'natural': moment.unix(Number(req.params.date)).format(''),
-      'type': 'unix'
+      'unix': date.unix(),
+      'natural': date.format('MMMM D, YYYY')
     });
   } else {
+    var date = moment(req.params.date);
+    if(date.isValid()){
+      res.json({
+        'unix': date.unix(),
+        'natural': date.format('MMMM D, YYYY')
+      })
+    }
+
+    // default response
     res.json({
       'unix': null,
       'natural': null
     })
   }
-
 });
 
-// ===================================
-// TIMESTAMP INPUT ========================
-// ===================================
-app.get('/:timestamp',function(req,res){
-   res.json({
-     'natural': new Date(req.params.timestamp),
-     'unix': req.params.timestamp
-   });
-}); // load our routes
 // launch ======================================================================
 app.listen(port);
-console.log('The magic is happening on port '+port);
+console.log('==> 🌎  Listening on port '+port);
